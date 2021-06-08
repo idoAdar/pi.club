@@ -1,0 +1,23 @@
+.nav-item {
+  width: 8rem;
+  height: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-item p {
+  text-align: center;
+}
+
+.nav-item div {
+  padding: 0.5rem 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-item i {
+  color: #0000008e;
+}

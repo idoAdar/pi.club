@@ -1,23 +1,18 @@
-import logo from './logo.svg';
+import Header from './components/Header/Header';
+import Nav from './components/Nav/Nav';
+import { data } from './components/FAKEJSON';
+
 import './App.css';
 
-function App() {
+const App = () => {
+  const weatherDetails = data.list.map(temp => {
+    return temp;
+});
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={'weather-container'}>
+      <Header day={weatherDetails[0]}/>
+      <Nav days={weatherDetails}/>
     </div>
   );
 }
